@@ -27,5 +27,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check Node.js and npm versions
+        run: |
+          node -v
+          npm -v
+
+      - name: Debug environment
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files in the directory:"
+          ls -al
+
       - name: Start application
         run: npm start
+        
